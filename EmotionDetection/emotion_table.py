@@ -1,7 +1,7 @@
 import mysql.connector
-from detector import Detector
+#from detector_v1 import Detector_v1
 
-conn = mysql.connector.connect(host="localhost", user="root", password="tul#21MySQL",database="emotions")
+conn = mysql.connector.connect(host="localhost", user="root", password="tul#21MySQL", database="emotions")
 cursor = conn.cursor()
 
 print("Connection Established: " + str(conn.is_connected()))
@@ -46,7 +46,7 @@ while True:
 
         assert(time_offset <= 100)
 
-        detector = Detector('-c')
+        detector = Detector_v1(' -c')
 
         emotions, avg_age, avg_angry_age = detector.capture_video(time_offset)
         min, max = emotion_instances(emotions)
