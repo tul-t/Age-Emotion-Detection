@@ -2,3 +2,4 @@
 /.venv/
 /EmotionDetection/age
 /EmotionDetection/model
+EmotionDetection/__pycache__/detector.cpython-311.pyc
